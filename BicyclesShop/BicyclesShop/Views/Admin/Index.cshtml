@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BicyclesShop.Models.Bicycle>
+
+<div>
+    @Html.ActionLink("Создать", "Create", "Admin", null, new { @class = "btn btn-primary" })
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Цвет</th>
+            <th>Тип</th>
+            <th>Диаметр колеса</th>
+            <th>Размер рамы</th>>
+            <th>Материал рамы</th>>
+            <th>Цена</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bicycle in Model)
+        {
+        <tr>
+            <td>@bicycle.Title</td>
+            <td>@bicycle.Color</td>
+            <td>@bicycle.Type</td>
+            <td>@bicycle.WheelDiametr''</td>
+            <td>@bicycle.FrameSize''</td>
+            <td>@bicycle.FrameMaterial</td>
+            <td>@bicycle.Price грн</td>
+            <td>
+                <a asp-controller="Admin" asp-action="Create" asp-route-bicycleId="@bicycle.BicycleId" class="btn btn-warning">Редактировать</a>
+            </td>
+            <td>
+                <form method="post" action="~/Admin/Delete">
+                    <input type="hidden" value="@bicycle.BicycleId" name="bicycleId" />
+                    <input type="submit" class="btn btn-danger" value="Удалить" />
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

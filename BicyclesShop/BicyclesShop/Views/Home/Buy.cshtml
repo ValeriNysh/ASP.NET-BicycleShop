@@ -1,0 +1,30 @@
+﻿@model BicyclesShop.Models.Order
+
+<div>
+    <h2 class="text-center mb-5" style="color:purple;">Оформление заказа</h2>
+    @*@Html.ValidationSummary()*@
+<form method="post">
+    <input type="hidden" name="BicycleId" value="@ViewBag.BicycleId" />
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <label class="ml-auto mr-auto mb-2 font-weight-bold">Имя покупателя</label>
+        @*@<input type="text" name="User" />*@
+        @Html.TextBoxFor(x => x.User)
+        @Html.ValidationMessageFor(x => x.User)
+    </div>
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <label class="ml-auto mr-auto mb-2 font-weight-bold">Телефон</label>
+        @Html.TextBoxFor(x => x.ContactPhone)
+        @Html.ValidationMessageFor(x => x.ContactPhone)
+    </div>
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <label class="ml-auto mr-auto mb-2 font-weight-bold">Адрес</label>
+        @Html.TextBoxFor(x => x.Address)
+        @Html.ValidationMessageFor(x => x.Address)
+    </div>
+    <div class="form-group ml-5 mr-5">
+        <input type="submit" class="btn btn-primary d-block mx-auto w-100 mt-5" />
+    </div>
+</form>
+
+
+</div>

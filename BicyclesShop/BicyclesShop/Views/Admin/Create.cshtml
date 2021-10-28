@@ -1,0 +1,50 @@
+﻿@model BicyclesShop.Models.Bicycle
+<h1> </h1>
+
+<form method="post" class="ml-5 mr-5">
+    @Html.HiddenFor(x => x.BicycleId)
+
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        @*<lable formaction="title" class="ml-auto mr-auto mb-2 font-weight-bold">Название</lable>
+            <input id="title" type="text" name="Title" value="@Model.Title" 3 class="w-50 ml-auto mr-auto" />*@
+        <lable formaction="title" class="ml-auto mr-auto mb-2 font-weight-bold">Название</lable>
+        @Html.TextBoxFor(x => x.Title)
+        @Html.ValidationMessageFor(x => x.Title)
+    </div>
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <lable formaction="color" class="ml-auto mr-auto mb-2 font-weight-bold">Цвет</lable>
+        @Html.TextBoxFor(x => x.Color)
+        @Html.ValidationMessageFor(x => x.Color)
+    </div>
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <lable formaction="type" class="ml-auto mr-auto mb-2 font-weight-bold">Тип</lable>
+        @Html.TextBoxFor(x => x.Type)
+        @Html.ValidationMessageFor(x => x.Type)
+    </div>
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <lable formaction="WheelDiametr" class="ml-auto mr-auto mb-2 font-weight-bold">Диаметр колеса</lable>
+        @Html.TextBoxFor(x => x.WheelDiametr)
+        @Html.ValidationMessageFor(x => x.WheelDiametr)
+    </div>
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <lable formaction="FrameSize" class="ml-auto mr-auto mb-2 font-weight-bold">Размер рамы</lable>
+        @Html.TextBoxFor(x => x.FrameSize)
+        @Html.ValidationMessageFor(x => x.FrameSize)
+    </div>
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <lable formaction="FrameMaterial" class="ml-auto mr-auto mb-2 font-weight-bold">Материал рамы</lable>
+        @Html.TextBoxFor(x => x.FrameMaterial)
+        @Html.ValidationMessageFor(x => x.FrameMaterial)
+    </div>
+    <div class="form-group ml-5 mr-5 d-flex flex-column">
+        <lable formaction="Price" class="ml-auto mr-auto mb-2 font-weight-bold">Цена, грн</lable>
+        @Html.TextBoxFor(x => x.Price)
+        @Html.ValidationMessageFor(x => x.Price)
+    </div>
+    <div class="ml-5 mr-5">
+        <input type="submit" value="Сохранить" class="btn btn-primary w-100 mt-3 mb-3" />
+    </div>
+</form>
+
+
+
