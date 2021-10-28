@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sjtRpMCP7jX2B/yyFKeYTKFtcfMVQ8+X5/A9aEHpbOTGD5f49OJD1kc7TsNBpvSIAT7VvNfOQWk2L0kBUY0Ztg==",
+  "dgSpecHash": "+zNtppB5Kp0v+ZfsSwf6Td76j7BWf85ymp6M0D0S82n5pTWqF5YZSuBvN7EAW7JGM2kvStECCE0d5xwsRlexeA==",
   "success": true,
-  "projectFilePath": "D:\\PROGRAMMING\\ASP.NET\\+09.04.2021. ASP.NET Core MVC. Модель, контроллер, представление. Понятие метода действия\\BicyclesShop\\BicyclesShop\\BicyclesShop.csproj",
+  "projectFilePath": "D:\\PROGRAMMING\\ASP.NET\\BicycleShop_repo\\ASP.NET-BicycleShop\\BicyclesShop\\BicyclesShop\\BicyclesShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

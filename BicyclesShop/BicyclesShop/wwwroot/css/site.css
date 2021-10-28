@@ -35,6 +35,11 @@ html {
   }
 }
 
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
@@ -74,5 +79,5 @@ body {
     color: red;
     font-style: italic;
     font-size: 1em;
-} 
+}
 

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BicyclesShop.Models.Bicycle>
 
-<div>
-    @Html.ActionLink("Создать", "Create", "Admin", null, new { @class = "btn btn-primary" })
+<div style="margin-bottom:20px; margin-top:30px;">
+    @Html.ActionLink("Добавить новый товар", "Create", "Admin", null, new { @class = "btn btn-primary" })
 </div>
 
 <table class="table">
@@ -11,8 +11,8 @@
             <th>Цвет</th>
             <th>Тип</th>
             <th>Диаметр колеса</th>
-            <th>Размер рамы</th>>
-            <th>Материал рамы</th>>
+            <th>Размер рамы</th>
+            <th>Материал рамы</th>
             <th>Цена</th>
             <th></th>
             <th></th>

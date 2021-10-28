@@ -5706,11 +5706,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROGRAMMING\\ASP.NET\\+09.04.2021. ASP.NET Core MVC. Модель, контроллер, представление. Понятие метода действия\\BicyclesShop\\BicyclesShop\\BicyclesShop.csproj",
+      "projectUniqueName": "D:\\PROGRAMMING\\ASP.NET\\BicycleShop_repo\\ASP.NET-BicycleShop\\BicyclesShop\\BicyclesShop\\BicyclesShop.csproj",
       "projectName": "BicyclesShop",
-      "projectPath": "D:\\PROGRAMMING\\ASP.NET\\+09.04.2021. ASP.NET Core MVC. Модель, контроллер, представление. Понятие метода действия\\BicyclesShop\\BicyclesShop\\BicyclesShop.csproj",
+      "projectPath": "D:\\PROGRAMMING\\ASP.NET\\BicycleShop_repo\\ASP.NET-BicycleShop\\BicyclesShop\\BicyclesShop\\BicyclesShop.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\PROGRAMMING\\ASP.NET\\+09.04.2021. ASP.NET Core MVC. Модель, контроллер, представление. Понятие метода действия\\BicyclesShop\\BicyclesShop\\obj\\",
+      "outputPath": "D:\\PROGRAMMING\\ASP.NET\\BicycleShop_repo\\ASP.NET-BicycleShop\\BicyclesShop\\BicyclesShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
