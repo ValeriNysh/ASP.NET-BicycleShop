@@ -1,0 +1,60 @@
+﻿@model BicyclesShop.Models.ViewModels.CartIndexViewModel
+
+<h1>Корзина</h1>
+
+@if (Model.Cart.Lines.Count() == 0)
+{
+    <h2 style="margin-top: 50px;">Корзина пустая!</h2>
+    <h3>P.S. Но это никогда не поздно исправить :)</h3>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Кол-во</th>
+                <th>Название</th>
+                <th>Цвет</th>
+                <th>Тип</th>
+                <th>Диаметр колеса</th>
+                <th>Размер рамы</th>
+                <th>Материал рамы</th>
+                <th>Цена</th>
+                <th>Промежуточный итог</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model.Cart.Lines)
+            {
+                <tr>
+                    <td>@line.Quantity</td>
+                    <td>@line.Bicycle.Title</td>
+                    <td>@line.Bicycle.Color</td>
+                    <td>@line.Bicycle.Type</td>
+                    <td>@line.Bicycle.WheelDiametr</td>
+                    <td>@line.Bicycle.FrameSize</td>
+                    <td>@line.Bicycle.FrameMaterial</td>
+                    <td>@line.Bicycle.Price</td>
+                    <td>@(line.Quantity * line.Bicycle.Price)</td>
+                    <td>
+                        @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                        {
+                            <input type="hidden" value="@line.Bicycle.BicycleId" name="BicycleId" />
+                            @Html.Hidden("returnUrl", Context.Request.Path)
+                            <input type="submit" class="btn btn-danger" value="Удалить" />
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Общая стоимость:</td>
+                <td>@Model.Cart.ComputeTotalValue()</td>
+            </tr>
+        </tfoot>
+
+    </table>
+}
+<a href="@Model.ReturnUrl" class="btn" style="margin-top:50px; background-color:lawngreen !important; border: 3px solid green;">Продолжить покупки</a>

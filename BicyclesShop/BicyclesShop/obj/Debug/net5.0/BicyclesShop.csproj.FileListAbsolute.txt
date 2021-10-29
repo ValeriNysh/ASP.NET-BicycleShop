@@ -209,3 +209,4 @@ D:\PROGRAMMING\ASP.NET\BicycleShop_repo\ASP.NET-BicycleShop\BicyclesShop\Bicycle
 D:\PROGRAMMING\ASP.NET\BicycleShop_repo\ASP.NET-BicycleShop\BicyclesShop\BicyclesShop\obj\Debug\net5.0\ref\BicyclesShop.dll
 D:\PROGRAMMING\ASP.NET\BicycleShop_repo\ASP.NET-BicycleShop\BicyclesShop\BicyclesShop\obj\Debug\net5.0\BicyclesShop.pdb
 D:\PROGRAMMING\ASP.NET\BicycleShop_repo\ASP.NET-BicycleShop\BicyclesShop\BicyclesShop\obj\Debug\net5.0\BicyclesShop.genruntimeconfig.cache
+D:\PROGRAMMING\ASP.NET\BicycleShop_repo\ASP.NET-BicycleShop\BicyclesShop\BicyclesShop\obj\Debug\net5.0\Razor\Views\Cart\Index.cshtml.g.cs

@@ -35,7 +35,15 @@
                 <td>@bicycle.FrameSize''</td>
                 <td>@bicycle.FrameMaterial</td>
                 <td>@bicycle.Price грн</td>
-                <th><a href="~/Home/Buy/@bicycle.BicycleId" class="btn btn-primary">Buy</a></th>
+                <td><a href="~/Home/Buy/@bicycle.BicycleId" class="btn btn-secondary">Купить</a></td>
+                <td>
+                    @using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                        <input type="hidden" value="@bicycle.BicycleId" name="BicycleId" />
+                        @Html.Hidden("returnUrl", Context.Request.Path)
+                        <input type="submit" class="btn btn-primary" value="+  в корзину" />
+                    }
+                </td>
             </tr>
         }
     </tbody>
