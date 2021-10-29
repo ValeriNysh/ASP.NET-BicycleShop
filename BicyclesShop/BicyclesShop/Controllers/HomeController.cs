@@ -1,5 +1,6 @@
 ﻿using BicyclesShop.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -21,13 +22,20 @@ namespace BicyclesShop.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(string thanks="")
+        public async Task<IActionResult> Index(string thanks="", int pageNumber=1)
         {
             if (!string.IsNullOrEmpty(thanks))
                 ViewBag.Thanks = thanks;
-            var bicycles = context.Bicycles.ToList();
+
+            var bicycles = context.Bicycles.OrderBy(x => x.BicycleId);
+
+            int pageSize = 10;
+
+            //var bicycles = context.Bicycles.ToList();
+            //return View(bicycles);
+
+            return View(await PaginatedList<Bicycle>.CreateAsync(bicycles.AsNoTracking(), pageNumber, pageSize));
             
-            return View(bicycles);
         }
 
         

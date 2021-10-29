@@ -1,46 +1,63 @@
-﻿@model IEnumerable<BicyclesShop.Models.Bicycle>
-<!DOCTYPE html>
-  @{ 
-      Layout = "_Layout";
-  }
+﻿@*@model IEnumerable<BicyclesShop.Models.Bicycle>*@
+@model PaginatedList<BicyclesShop.Models.Bicycle>
 
-@if(ViewBag.Thanks != null)
+<!DOCTYPE html>
+@{
+    Layout = "_Layout";
+}
+
+@if (ViewBag.Thanks != null)
 {
     <div class="display-4 text-center font-weight-bold mb-3" style="color:darkgreen; background-color:lawngreen">@ViewBag.Thanks</div>
 }
 
-   <h1>Велосипеды</h1>
-   <table class="table">
-       <thead>
-           <tr>
-               <th>Название</th>
-               <th>Цвет</th>
-               <th>Тип</th>
-               <th>Диаметр колеса</th>
-               <th>Размер рамы</th>
-               <th>Материал рамы</th>
-               <th>Цена</th>
-           </tr>
-       </thead>
-       <tbody>
-           @foreach (var bicycle in Model)
-           {
-               <tr>
-                   <td>@bicycle.Title</td>
-                   <td>@bicycle.Color</td>
-                   <td>@bicycle.Type</td>
-                   <td>@bicycle.WheelDiametr''</td>
-                   <td>@bicycle.FrameSize''</td>
-                   <td>@bicycle.FrameMaterial</td>
-                   <td>@bicycle.Price грн</td>
-                   <th><a href="~/Home/Buy/@bicycle.BicycleId" class="btn btn-primary">Buy</a></th>
-               </tr>
-           }
-       </tbody>
-   </table>
+<h1>Велосипеды</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Цвет</th>
+            <th>Тип</th>
+            <th>Диаметр колеса</th>
+            <th>Размер рамы</th>
+            <th>Материал рамы</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bicycle in Model)
+        {
+            <tr>
+                <td>@bicycle.Title</td>
+                <td>@bicycle.Color</td>
+                <td>@bicycle.Type</td>
+                <td>@bicycle.WheelDiametr''</td>
+                <td>@bicycle.FrameSize''</td>
+                <td>@bicycle.FrameMaterial</td>
+                <td>@bicycle.Price грн</td>
+                <th><a href="~/Home/Buy/@bicycle.BicycleId" class="btn btn-primary">Buy</a></th>
+            </tr>
+        }
+    </tbody>
+</table>
 
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+
+    <div class="text-center">
+        <a asp-action="Index"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           class="btn page prevPage @prevDisabled">            
+        </a>
+        <a asp-action="Index"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           class="btn page nextPage @nextDisabled">           
+        </a>
+    </div>
+    <div class="infoPage">Страница @Model.PageIndex из @Model.TotalPages </div>
     
-
+}
 
 
 

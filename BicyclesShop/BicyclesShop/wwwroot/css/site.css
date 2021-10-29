@@ -37,7 +37,9 @@ html {
 
 h1 {
     text-align: center;
-    color: darkblue;
+    color: forestgreen;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .border-top {
@@ -81,3 +83,26 @@ body {
     font-size: 1em;
 }
 
+.page {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.prevPage {
+    background-image: url(../Resources/Previous_48x48.png) !important;
+    margin-right: 10px;
+}
+
+.nextPage {
+    background-image: url(../Resources/Next_48x48.png) !important;
+    margin-left: 10px;
+}
+
+.infoPage {
+    text-align: center;
+    margin-top: 15px;
+    font-style: italic;
+    font-size: 16px;
+}

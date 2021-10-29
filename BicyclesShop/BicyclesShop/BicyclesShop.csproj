@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Resources\Next_48x48.png" />
+    <None Include="wwwroot\Resources\Previous_48x48.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
   </ItemGroup>
 
